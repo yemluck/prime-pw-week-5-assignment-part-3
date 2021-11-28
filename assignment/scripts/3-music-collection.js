@@ -52,3 +52,8 @@ findByArtist('Ed Sheeran');
 findByArtist('Chris');
 findByArtist('Runtown');
 
+/*
+
+Tried the stretch goals but I was getting errors in trying to pass an object as parameter for function
+
+*/
