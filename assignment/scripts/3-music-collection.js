@@ -12,27 +12,29 @@ function addToCollection(title, artist, yearPublished) {
     return album
 } // end function addToCollection.
 
-console.log(addToCollection('Ed Sheeran', 'Perfect', 2017));
+console.log(addToCollection('Perfect', 'Ed Sheeran', 2017));
 
-console.log(addToCollection('Mayorukun ft. Davido', 'Bobo', 2018));
+console.log(addToCollection('Bobo','Mayorukun ft. Davido', 2018));
 
-console.log(addToCollection('Ed Sheeran', 'Shape of you', 2017));
+console.log(addToCollection('Shape of you','Ed Sheeran', 2017));
 
-console.log(addToCollection('Runtown', 'Mad over you', 2017));
+console.log(addToCollection('Mad over you','Runtown', 2017));
 
-console.log(addToCollection('Bad Wolves', 'Zombie', 2018));
+console.log(addToCollection('Zombie','Bad Wolves', 2018));
 
-console.log(addToCollection('The Fray', 'How to save a life', 2005));
+console.log(addToCollection('How to save a life','The Fray', 2005));
 
 console.log(collection); // end test
 
 
-
+// Function to show the collections
 function showCollection(array){
-
-
+    console.log('Number of albums in the collection', array.length)
+    for(let x of array){
+        console.log(`Song title is ${x.title} by ${x.artist} and it was published in ${x.yearPublished}.`)
+    } // end for of loop
 } // end showCollection
-
+console.log(showCollection(collection));
 
 
 
