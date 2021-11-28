@@ -29,25 +29,26 @@ console.log(collection); // end test
 
 // Function to show the collections
 function showCollection(array){
-    console.log('Number of albums in the collection', array.length)
+    console.log('Number of albums in the collection', array.length) // number of items in the array
     for(let x of array){
-        console.log(`Song title is ${x.title} by ${x.artist} and it was published in ${x.yearPublished}.`)
+       console.log(`Song title is ${x.title} by ${x.artist} and it was published in ${x.yearPublished}.`)
     } // end for of loop
+   
 } // end showCollection
-console.log(showCollection(collection));
+showCollection(collection); //to test the function
 
+// Function to search collection by artist
+function findByArtist(artist){
+    let output = [];
+    for(let album of collection){
+        if( album.artist === artist){
+            output.push(album)
+        }  // end of if
+    } // end of for of loop
+    return console.log(artist, 'has', output.length, 'song(s) in the collection:', output)
+} // end findByArtist
 
+findByArtist('Ed Sheeran');
+findByArtist('Chris');
+findByArtist('Runtown');
 
-
-
-
-
-
-/*
-Add a function named `showCollection`. This function should:
-  - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
-  - Console.log the number of items in the array.
-  - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
-
-- Test the `showCollection` function.
-*/
